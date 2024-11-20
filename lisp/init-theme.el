@@ -6,9 +6,13 @@
 
 (global-display-line-numbers-mode 1)
 
+
+;; (add-to-list 'default-frame-alist '(background-color . "unspecified-bg"))
+
+
 (load-theme 'modus-operandi)
 (setq inhibit-startup-screen t)
-(setq initial-scratch-message nil)
+(setq initial-scratch-message ";; Hello, Emacs!")
 
 (provide 'init-theme)
 ;; init-theme.el ends here

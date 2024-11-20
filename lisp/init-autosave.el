@@ -5,7 +5,6 @@
 (setq auto-save-default nil)
 (setq vc-make-backup-files nil)
 
-
 (use-package auto-save
   :vc (:fetcher "github" :repo "manateelazycat/auto-save")
   :init

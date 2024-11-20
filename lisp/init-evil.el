@@ -3,7 +3,9 @@
 (use-package evil
   :ensure t
   :init
-  (evil-mode 1))
+  (evil-mode 1)
+  (evil-set-initial-state 'vterm-mode 'emacs)
+  (evil-set-initial-state 'eaf-mode 'emacs))
 
 (use-package evil-escape
   :ensure t
@@ -22,9 +24,13 @@
     :keymaps 'normal
     "ff" 'counsel-find-file
     "fp" 'project-find-file
+    "tt" 'vterm
+    "sb" 'counsel-switch-buffer
     "rg" 'counsel-rg
     "ss" 'swiper
-    "tt" 'aweshell-new)
+    "oa" 'org-agenda
+    "td" 'org-todo
+    )
   )
 
 (provide 'init-evil)

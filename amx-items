@@ -1,0 +1,18 @@
+
+;; ----- amx-history -----
+(
+ insert-title
+ lsp-bridge-mode
+ emacs-init-time
+ cd
+ 5x5
+ amx
+ arp
+)
+
+;; ----- amx-data -----
+(
+ (emacs-init-time . 1)
+ (lsp-bridge-mode . 1)
+ (insert-title . 4)
+)

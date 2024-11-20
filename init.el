@@ -14,9 +14,11 @@
 (require 'init-lsp)
 (require 'init-modeline)
 (require 'init-clipboard)
+(require 'init-org)
 
 (require 'init-python)
 (require 'init-c)
+(require 'init-rust)
 (require 'init-shell)
 
 (setq custom-file (expand-file-name "custom-set-variables.el" user-emacs-directory))
