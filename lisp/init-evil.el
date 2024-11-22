@@ -29,7 +29,10 @@
     "rg" 'counsel-rg
     "ss" 'swiper
     "oa" 'org-agenda
-    "td" 'org-todo
+    "ot" 'org-todo
+    "oc" 'org-capture
+    "oj" 'org-metaup
+    "ok" 'org-priority-down
     )
   )
 

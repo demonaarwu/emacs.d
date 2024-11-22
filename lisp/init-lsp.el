@@ -14,7 +14,8 @@
 (use-package lsp-bridge
   :vc (:fetcher github :repo "manateelazycat/lsp-bridge")
   :init
-  (global-lsp-bridge-mode))
+  (add-hook 'python-mode-hook 'lsp-bridge-mode)
+  (add-hook 'emacs-lisp-mode-hook 'lsp-bridge-mode))
 
 (use-package acm-terminal
   :vc (:fetcher github :repo "twlz0ne/acm-terminal")
