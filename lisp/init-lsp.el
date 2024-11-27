@@ -8,8 +8,8 @@
 (use-package markdown-mode
   :ensure t)
 
-(use-package popon
-  :vc (popon :url "https://codeberg.org/akib/emacs-popon"))
+;;(use-package popon
+;;  :vc (popon :url "https://codeberg.org/akib/emacs-popon"))
 
 (use-package lsp-bridge
   :vc (:fetcher github :repo "manateelazycat/lsp-bridge")
@@ -17,12 +17,12 @@
   (add-hook 'python-mode-hook 'lsp-bridge-mode)
   (add-hook 'emacs-lisp-mode-hook 'lsp-bridge-mode))
 
-(use-package acm-terminal
-  :vc (:fetcher github :repo "twlz0ne/acm-terminal")
-  :init
-  (unless (display-graphic-p)
-              (with-eval-after-load 'acm
-                (require 'acm-terminal))))
+;;(use-package acm-terminal
+ ;; :vc (:fetcher github :repo "twlz0ne/acm-terminal")
+  ;;:init
+ ;; (unless (display-graphic-p)
+  ;;            (with-eval-after-load 'acm
+   ;;             (require 'acm-terminal))))
 
 (provide 'init-lsp)
 ;; init-lsp.el ends here

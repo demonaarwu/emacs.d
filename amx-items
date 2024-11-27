@@ -1,21 +1,46 @@
 
 ;; ----- amx-history -----
 (
- emacs-init-time
- company-mode
+ format-all-buffer
+ org-mode
+ check-ispell-version
+ which-key-mode
  package-install
- lsp-bridge-mode
- global-lsp-bridge-mode
- insert-title
- cd
+ emacs-init-time
+ format-all-mode
 )
 
 ;; ----- amx-data -----
 (
- (emacs-init-time . 6)
- (lsp-bridge-mode . 2)
- (insert-title . 9)
- (global-lsp-bridge-mode . 2)
- (package-install . 1)
- (company-mode . 1)
+ (emacs-init-time . 13)
+ (lsp-bridge-mode . 4)
+ (insert-title . 17)
+ (ivy-switch-buffer . 1)
+ (org-todo . 1)
+ (dired . 3)
+ (package-install . 10)
+ (tuareg-mode . 1)
+ (company-mode . 3)
+ (slime . 2)
+ (slime-mode . 2)
+ (common-lisp-mode . 1)
+ (company-ispell . 4)
+ (other-window . 2)
+ (emacs-version . 1)
+ (package-refresh-contents . 1)
+ (corfu-last . 1)
+ (corfu-mode . 2)
+ (winum-select-window-2 . 2)
+ (awesome-tray-enable . 1)
+ (format-all-mode . 6)
+ (format-all-buffer . 8)
+ (split-window-horizontally . 4)
+ (package-vc-install . 1)
+ (lambda-line-mode . 2)
+ (simple-modeline-mode . 3)
+ (awesome-tray-mode . 1)
+ (project-find-file . 1)
+ (which-key-mode . 1)
+ (check-ispell-version . 1)
+ (org-mode . 1)
 )
