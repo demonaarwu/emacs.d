@@ -6,5 +6,9 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+(defun insert-date ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d")))
+
 (provide 'init-edit)
 ;; init-edit.el ends here

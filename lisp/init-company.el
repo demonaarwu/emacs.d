@@ -22,7 +22,7 @@
 
 (use-package company
   :ensure t
-  :config
+  :init
   (aaw-ispell-setup)
   (setq company-show-numbers t)
   (setq company-idle-delay 0)

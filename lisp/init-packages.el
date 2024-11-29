@@ -7,5 +7,7 @@
   (package-vc-install "https://github.com/slotThe/vc-use-package"))
 (require 'vc-use-package)
 
+(setq use-package-always-defer t)
+
 (provide 'init-packages)
 ;; init-packages.el ends here

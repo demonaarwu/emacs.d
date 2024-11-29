@@ -23,6 +23,7 @@
 (require 'init-clipboard)
 (require 'init-windows)
 (require 'init-org)
+(require 'init-epub)
 
 (require 'init-python)
 (require 'init-c)
@@ -31,7 +32,7 @@
 (require 'init-shell)
 
 (setq custom-file (expand-file-name "custom-set-variables.el" user-emacs-directory))
-(load custom-file t t)
+(load custom-file t)
 
 (if (file-exists-p "~/.emacs.d/custom.el")
     (load "~/.emacs.d/custom.el"))
