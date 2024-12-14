@@ -7,9 +7,6 @@
   (insert "#+title: \n")
   (insert "#+date: " (format-time-string "%Y-%m-%d")))
 
-(defun evil-org-setup ()
-  (setq evil-want-C-i-jump nil))
-
 (setq org-default-notes-file "~/org/inbox.org")
 
 ;; When a TODO is set to a done state, record a timestamp
@@ -20,7 +17,23 @@
 
 (setq truncate-lines nil)
 
-(add-hook 'org-mode 'evil-org-setup)
+;; Org Capture Configuration
+(setq org-capture-templates nil)
+
+(defun get-words-learned-today ()
+  (read-string "English Words: "))
+
+(defun get-math-problems-done-today ()
+  (read-string "Math Problems: "))
+
+(setq aaw-habit-tracker
+      '("h"
+        "Habit Tracker"
+        table-line
+        (file+headline "habit-tracker.org" "Habit Tracker")
+        "| %(format-time-string \"%Y-%m-%d\") | %(get-words-learned-today)| %(get-math-problems-done-today)|"))
+
+(add-to-list 'org-capture-templates aaw-habit-tracker)
 
 (provide 'init-org)
 ;; init-org.el ends here
