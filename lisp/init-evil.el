@@ -38,7 +38,7 @@
     "ot" 'org-todo
     "oc" 'org-capture
     "oj" 'org-metaup
-    "cp" 'compileandrun
+    "cp" 'compile-and-run
     "od" 'org-journal-new-entry
     "ok" 'org-priority-down
     "0" 'winum-select-window-0

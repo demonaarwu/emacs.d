@@ -5,11 +5,14 @@
 
 (add-hook 'c++-mode-hook 'aaw-c++-mode-hook)
 
-(defun compileandrun()
+(defun compile-and-run ()
   (interactive)
-  (let* ((src (file-name-nondirectory (buffer-file-name)))
-         (exe (file-name-sans-extension src)))
-    (compile (concat "g++ " src " -o " exe " && timeout 1s ./" exe ))))
+  (let ((c++-file-name buffer-file-name))
+    (vterm-other-window)
+    (vterm-send-string (concat "g++ " c++-file-name))
+    (vterm-send-return)
+    (vterm-send-string "./a.out")
+    (vterm-send-return)))
 
 (provide 'init-c)
 ;; init-c.el ends here
