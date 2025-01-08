@@ -28,7 +28,7 @@
     :keymaps 'normal
     "ff" 'counsel-find-file
     "fp" 'project-find-file
-    "tt" 'open-vterm
+    "tt" 'vterm-other-window
     "sb" 'counsel-switch-buffer
     "rr" 'counsel-recentf
     "rg" 'counsel-rg
