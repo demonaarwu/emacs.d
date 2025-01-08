@@ -26,7 +26,7 @@
 (require 'init-windows)
 (require 'init-org)
 (require 'init-epub)
-
+(require 'init-magit)
 (require 'init-python)
 (require 'init-c)
 (require 'init-cl)

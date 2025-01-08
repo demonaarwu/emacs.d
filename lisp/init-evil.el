@@ -33,6 +33,7 @@
     "rr" 'counsel-recentf
     "rg" 'counsel-rg
     "ss" 'swiper
+    "ms" 'magit-status
     "oa" 'org-agenda
     "ot" 'org-todo
     "oc" 'org-capture
