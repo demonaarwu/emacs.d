@@ -22,6 +22,10 @@
 (use-package general
   :ensure t
   :init
+  (general-define-key
+   :states 'normal
+   :keymaps 'vterm-mode-map
+   "p" 'vterm-yank)
   (general-create-definer aaw-leader-def
 	:prefix "SPC")
   (aaw-leader-def
