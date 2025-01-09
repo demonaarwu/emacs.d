@@ -20,7 +20,7 @@
   (require 'init-evil)
   (require 'init-autosave)
   ;; (require 'init-lsp)
-  ;; (require 'init-eglot)
+  (require 'init-eglot)
   (require 'init-company)
   (require 'init-modeline)
   (require 'init-clipboard)
