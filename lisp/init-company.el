@@ -27,8 +27,9 @@
   (setq company-show-numbers t)
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1)
-  (add-hook 'prog-mode-hook 'company-mode)
-  (add-hook 'org-mode-hook 'aaw-company-ispell-setup))
+  (global-company-mode 1)
+  (add-hook 'text-mode-hook 'aaw-company-ispell-setup))
+
 
 (provide 'init-company)
 ;; init-company.el ends here
