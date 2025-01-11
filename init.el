@@ -40,6 +40,7 @@
        (require 'init-autosave)
        (require 'init-magit)
        (require 'init-python)
+       (require 'init-racket)
        ;; (require 'init-c)
        (require 'init-cl)
        (require 'init-rust)))
