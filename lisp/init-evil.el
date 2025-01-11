@@ -60,5 +60,10 @@
     )
   )
 
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode 1))
+
 (provide 'init-evil)
 ;; init-evil.el ends here
