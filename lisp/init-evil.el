@@ -57,11 +57,5 @@
     )
   )
 
-(use-package marginalia
-  :ensure t
-  :after vertico
-  :init
-  (marginalia-mode 1))
-
 (provide 'init-evil)
 ;; init-evil.el ends here
