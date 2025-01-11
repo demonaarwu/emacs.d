@@ -30,13 +30,13 @@
 	:prefix "SPC")
   (aaw-leader-def
     :keymaps 'normal
-    "ff" 'counsel-find-file
+    "ff" 'find-file
     "fp" 'project-find-file
     "tt" 'vterm-other-window
-    "sb" 'counsel-switch-buffer
-    "rr" 'counsel-recentf
-    "rg" 'counsel-rg
-    "ss" 'swiper
+    "sb" 'consult-buffer
+    "rr" 'consult-recent-file
+    "rg" 'consult-ripgrep
+    "ss" 'consult-line
     "ms" 'magit-status
     "oa" 'org-agenda
     "ot" 'org-todo
@@ -56,6 +56,12 @@
     "/" 'evilnc-comment-or-uncomment-lines
     )
   )
+
+(use-package marginalia
+  :ensure t
+  :after vertico
+  :init
+  (marginalia-mode 1))
 
 (provide 'init-evil)
 ;; init-evil.el ends here

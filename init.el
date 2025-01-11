@@ -15,7 +15,7 @@
   (require 'init-edit)
   (require 'init-theme)
   (require 'init-packages)
-  (require 'init-ivy)
+  (require 'init-vertico)
   (require 'init-term)
   (require 'init-evil)
   (require 'init-autosave)
