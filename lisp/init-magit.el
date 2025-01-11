@@ -3,5 +3,12 @@
 (use-package magit
   :ensure t)
 
+(use-package diff-hl
+  :ensure t
+  :init
+  (global-diff-hl-mode))
+
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+
 (provide 'init-magit)
 ;; init-magit.el ends here
