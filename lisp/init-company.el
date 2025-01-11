@@ -27,9 +27,7 @@
   (setq company-show-numbers t)
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1)
-  (add-hook 'after-init-hook 'global-company-mode)
-  (add-hook 'python-mode-hook (company-mode -1))
-  (add-hook 'c++-mode-hook (company-mode -1))
+  (add-hook 'prog-mode-hook 'company-mode)
   (add-hook 'org-mode-hook 'aaw-company-ispell-setup))
 
 (provide 'init-company)
