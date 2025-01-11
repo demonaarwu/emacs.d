@@ -36,6 +36,9 @@
     "sb" 'consult-buffer
     "rr" 'consult-recent-file
     "rg" 'consult-ripgrep
+    "gd" 'xref-find-references
+    "gb" 'xref-go-back
+    "rn" 'eglot-rename
     "ss" 'consult-line
     "ms" 'magit-status
     "oa" 'org-agenda
