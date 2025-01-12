@@ -38,6 +38,7 @@
        (require 'init-org)
        (require 'init-term)
        (require 'init-autosave)
+       (require 'init-eww)
        (require 'init-magit)
        (require 'init-python)
        (require 'init-racket)
