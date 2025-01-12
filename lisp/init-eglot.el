@@ -12,7 +12,7 @@
 
 (when (executable-find "emacs-lsp-booster")
   (use-package eglot-booster
-    :vc (:fetcher github :repo "jdtsmith/eglot-booster")
+    :vc (:url "https://github.com/jdtsmith/eglot-booster")
     :after eglot
     :init (eglot-booster-mode)))
 

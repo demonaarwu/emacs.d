@@ -6,7 +6,7 @@
 (setq vc-make-backup-files nil)
 
 (use-package auto-save
-  :vc (:fetcher "github" :repo "manateelazycat/auto-save")
+  :vc (:url "https://github.com/manateelazycat/auto-save")
   :init
   (require 'auto-save)
   (setq auto-save-idle 0.2)
