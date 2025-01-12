@@ -57,6 +57,8 @@
     "5" 'winum-select-window-5
     "6" 'winum-select-window-6
     "7" 'winum-select-window-7
+    "wh" 'split-window-horizontally
+    "wv" 'split-window-vertically
     "/" 'evilnc-comment-or-uncomment-lines
     "ya" 'consult-yasnippet
     )
