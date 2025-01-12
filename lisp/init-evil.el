@@ -57,6 +57,7 @@
     "6" 'winum-select-window-6
     "7" 'winum-select-window-7
     "/" 'evilnc-comment-or-uncomment-lines
+    "ya" 'consult-yasnippet
     )
   )
 

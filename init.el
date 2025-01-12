@@ -43,6 +43,7 @@
        (require 'init-racket)
        ;; (require 'init-c)
        (require 'init-cl)
+       (require 'init-snippet)
        (require 'init-rust)))
 
   (setq custom-file (expand-file-name "custom-set-variables.el" user-emacs-directory))
