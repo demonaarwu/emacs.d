@@ -32,6 +32,7 @@
     :keymaps 'normal
     "ff" 'find-file
     "fp" 'project-find-file
+    "sp" 'project-switch-project
     "tt" 'vterm-other-window
     "sb" 'consult-buffer
     "rr" 'consult-recent-file
