@@ -5,11 +5,7 @@
   :init
   (setq yas-verbosity 0)
   (yas-global-mode 1)
-  (global-set-key (kbd "M-y") 'yas-expand)
-  ;; make sure that when editing a snippet, the cursor won't move points the snippet saved.
-  (add-hook 'snippet-mode-hook (lambda ()
-                                 (make-local-variable 'after-save-hook)
-                                 (setq after-save-hook nil))))
+  (global-set-key (kbd "M-y") 'yas-expand))
 
 (use-package yasnippet-snippets
   :ensure t)
