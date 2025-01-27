@@ -25,7 +25,8 @@
   (general-define-key
    :states 'normal
    :keymaps 'vterm-mode-map
-   "p" 'vterm-yank)
+   "p" 'vterm-yank
+   "q" 'vterm-toggle)
   (general-create-definer aaw-leader-def
 	:prefix "SPC")
   (aaw-leader-def
