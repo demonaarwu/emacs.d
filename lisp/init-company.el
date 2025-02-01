@@ -9,6 +9,15 @@
   (setq company-minimum-prefix-length 1)
   (global-company-mode 1))
 
+(use-package company-quickhelp
+  :ensure t
+  :after company
+  :init
+  (company-quickhelp-mode)
+  (setq company-quickhelp-delay 0)
+  (setq pos-tip-foreground-color "#ffffff"
+        pos-tip-background-color "#ffffff"))
+
 (use-package cape
   :ensure t
   :init
