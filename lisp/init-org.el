@@ -41,6 +41,17 @@
   (setq org-journal-dir "~/org/journal")
   (setq org-journal-file-type 'weekly))
 
+(use-package virtual-auto-fill
+  :ensure t
+  :init
+  (add-hook 'org-mode-hook 'virtual-auto-fill-mode))
+
+(use-package writeroom-mode
+  :ensure t
+  :init
+  (add-hook 'org-mode-hook 'writeroom-mode)
+  (setq writeroom-width 120))
+
 (use-package org-download
   :ensure t
   :init
