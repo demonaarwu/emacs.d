@@ -41,5 +41,10 @@
   (setq org-journal-dir "~/org/journal")
   (setq org-journal-file-type 'weekly))
 
+(use-package org-download
+  :ensure t
+  :init
+  (add-hook 'org-mode-hook 'org-download-enable))
+
 (provide 'init-org)
 ;; init-org.el ends here
