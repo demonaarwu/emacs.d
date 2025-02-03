@@ -1,0 +1,19 @@
+;;; init-llm.el --- Configuration for LLMs  -*- lexical-binding: t -*-
+
+(use-package gptel
+  :ensure t
+  :init
+  ;; OPTIONAL configuration
+  ;; :key can be a function that returns the API key.
+  (gptel-make-gemini "Gemini" :key GEMINI-API-KEY :stream t)
+
+  ;; OPTIONAL configuration
+  (setq
+   gptel-model 'gemini-pro
+   gptel-backend (gptel-make-gemini "Gemini"
+                   :key GEMINI-API-KEY
+                   :stream t)))
+
+(provide 'init-llm)
+;;; init-llm.el ends here
+
