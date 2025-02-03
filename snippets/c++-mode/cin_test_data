@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: cin_test_data
+# key: te
+# --
+
+int t;
+cin >> t;
+
+while (t--)
+{
+
+}
