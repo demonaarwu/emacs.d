@@ -16,8 +16,10 @@
   )
 
 (use-package evil-nerd-commenter
-  :ensure t
-  )
+  :after evil
+  :init
+  (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
+  :ensure t)
 
 (use-package general
   :ensure t
@@ -60,7 +62,6 @@
     "7" 'winum-select-window-7
     "wh" 'split-window-horizontally
     "wv" 'split-window-vertically
-    "/" 'evilnc-comment-or-uncomment-lines
     "ya" 'consult-yasnippet
     )
   )
