@@ -36,7 +36,7 @@
     "ff" 'find-file
     "fp" 'project-find-file
     "sp" 'project-switch-project
-    "tt" 'vterm-other-window
+    "tt" 'vterm-toggle
     "sb" 'consult-buffer
     "rr" 'consult-recent-file
     "rg" 'consult-ripgrep
