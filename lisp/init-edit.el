@@ -1,6 +1,6 @@
 ;; init-edit.el -- Configuration for edit
 
-(electric-pair-mode 1)
+(add-hook 'prog-mode-hook 'electric-pair-mode)
 (setq backward-delete-char-untabify-method 'hungry)
 
 (setq-default indent-tabs-mode nil)
