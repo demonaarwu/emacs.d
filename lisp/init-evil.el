@@ -3,9 +3,9 @@
 (use-package evil
   :ensure t
   :init
-  (evil-mode 1)
-  (evil-set-initial-state 'vterm-mode 'emacs)
-  (evil-set-initial-state 'eaf-mode 'emacs))
+  (add-hook 'after-init-hook 'evil-mode)
+  (with-eval-after-load 'evil
+    (evil-set-initial-state 'vterm-mode 'insert)))
 
 (use-package evil-escape
   :ensure t
