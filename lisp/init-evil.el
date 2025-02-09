@@ -40,7 +40,8 @@
     "sb" 'consult-buffer
     "rr" 'consult-recent-file
     "rg" 'consult-ripgrep
-    "gd" 'xref-find-references
+    "fr" 'xref-find-references
+    "fd" 'xref-find-definitions
     "gb" 'xref-go-back
     "rn" 'eglot-rename
     "ss" 'consult-line
