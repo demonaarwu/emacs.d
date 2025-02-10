@@ -1,0 +1,22 @@
+* demonaarwu's Emacs Configuration
+
+- Really Fast (~800ms)
+- Vim-like keybindings (evil)
+- LSP Support (shout to eglot)
+- Multiple languages support (Python/C/C++/Rust/Dart/Racket/Lisp)
+
+* Table of Contents
+- [[#installation][Installation]]
+
+* Prerequisites
+- Emacs 30
+- [[https://github.com/BurntSushi/ripgrep][Ripgrep]]
+- [[https://github.com/blahgeek/emacs-lsp-booster][Emacs LSP Booster]]
+
+* Installation
+
+#+begin_src bash
+  git clone https://github.com/demonaarwu/emacs.d ~/.emacs.d/
+  emacs
+#+end_src
+
