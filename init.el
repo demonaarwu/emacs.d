@@ -20,13 +20,13 @@
 (setq gc-cons-threshold (* 128 1024 1024))
 
 (let ((file-name-handler-alist nil))
+  (require 'init-packages)
   (require 'init-misc)
   (require 'init-edit)
   (require 'init-theme)
-  (require 'init-packages)
   (require 'init-modeline)
-  (require 'init-vertico)
   (require 'init-evil)
+  (require 'init-vertico)
   (require 'init-windows)
   (run-with-idle-timer
    1 nil
@@ -35,6 +35,7 @@
        (require 'init-eglot)
        (require 'init-term)
        (require 'init-clipboard)
+       (require 'init-dired)
        (require 'init-org)
        (require 'init-autosave)
        (require 'init-eww)
@@ -42,6 +43,8 @@
        (require 'init-llm)
        (require 'init-python)
        (require 'init-racket)
+       (require 'init-web)
+       (require 'init-js)
        (require 'init-c)
        (require 'init-cl)
        (require 'init-snippet)
