@@ -28,7 +28,7 @@
     (beginning-of-line)
     (looking-at "[[:space:]]*$")))
 
-(define-key prog-mode-map (kbd "<backspace>") #'intellij-backspace)
+(global-set-key (kbd "<backspace>") #'intellij-backspace)
 
 (provide 'init-edit)
 ;; init-edit.el ends here
