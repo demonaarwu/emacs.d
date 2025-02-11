@@ -15,3 +15,5 @@ eln-cache/
 /transient/
 racket-mode/
 url/
+/tree-sitter/
+/history

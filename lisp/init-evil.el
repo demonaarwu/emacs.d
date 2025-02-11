@@ -9,20 +9,21 @@
 
 (use-package evil-escape
   :ensure t
+  :after evil
   :init
   (evil-escape-mode 1)
   (setq-default evil-escape-key-sequence "kj")
-  (setq-default evil-escape-delay 0.2)
-  )
+  (setq-default evil-escape-delay 0.2))
 
 (use-package evil-nerd-commenter
+  :ensure t
   :after evil
-  :init
-  (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
-  :ensure t)
+  :bind
+  ("M-;" . evilnc-comment-or-uncomment-lines))
 
 (use-package general
   :ensure t
+  :after evil
   :init
   (general-define-key
    :states 'normal
@@ -69,8 +70,8 @@
 
 (use-package which-key
   :ensure t
-  :init
-  (which-key-mode 1))
+  :hook
+  (after-init . which-key-mode))
 
 (provide 'init-evil)
 ;; init-evil.el ends here
