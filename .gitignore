@@ -17,3 +17,4 @@ racket-mode/
 url/
 /tree-sitter/
 /history
+/.cache/
