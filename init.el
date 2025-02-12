@@ -33,6 +33,7 @@
    #'(lambda ()
        (require 'init-company)
        (require 'init-eglot)
+       (require 'init-treesit)
        (require 'init-term)
        (require 'init-clipboard)
        (require 'init-dired)
