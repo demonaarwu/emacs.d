@@ -4,17 +4,18 @@
   :ensure t
   :custom
   (vertico--cycle t)
-  :bind
-  :init
-  (add-hook 'after-init-hook 'vertico-mode))
+  :hook
+  (after-init . vertico-mode))
 
 ;; Persist history over Emacs restarts. Vertico sorts by history position.
 (use-package savehist
+  :after vertico
   :init
   (savehist-mode))
 
 (use-package consult
-  :ensure t)
+  :ensure t
+  :after vertico)
 
 ;; Configure directory extension.
 (use-package vertico-directory
