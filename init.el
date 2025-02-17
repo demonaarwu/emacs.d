@@ -17,7 +17,7 @@
  ;; 不要自动启用package
  package--init-file-ensured t)
 
-(setq gc-cons-threshold (* 128 1024 1024))
+(setq gc-cons-threshold 200000000)
 
 (let ((file-name-handler-alist nil))
   (require 'init-packages)
@@ -32,7 +32,8 @@
    1 nil
    #'(lambda ()
        (require 'init-company)
-       (require 'init-eglot)
+       ;; (require 'init-eglot)
+       (require 'init-lsp)
        (require 'init-treesit)
        (require 'init-term)
        (require 'init-clipboard)
@@ -44,7 +45,7 @@
        (require 'init-llm)
        (require 'init-python)
        (require 'init-racket)
-       (require 'init-web)
+       ;; (require 'init-web)
        (require 'init-js)
        (require 'init-c)
        (require 'init-cl)
