@@ -15,7 +15,16 @@
 
 (use-package consult
   :ensure t
-  :after vertico)
+  :after vertico
+  :general
+  (aaw-leader-def
+    :states 'normal
+    "ff" 'find-file
+    "rg" 'consult-ripgrep
+    "sb" 'consult-buffer
+    "rr" 'consult-recent-file
+    "ya" 'consult-yasnippet
+    "ss" 'consult-line))
 
 ;; Configure directory extension.
 (use-package vertico-directory
