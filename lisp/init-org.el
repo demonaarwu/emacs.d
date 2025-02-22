@@ -35,6 +35,18 @@
 
 (add-to-list 'org-capture-templates aaw-habit-tracker)
 
+(use-package org
+  :ensure nil
+  :general
+  (aaw-leader-def
+    :states 'normal
+    "oa" 'org-agenda
+    "ot" 'org-todo
+    "oc" 'org-capture
+    "oj" 'org-metaup
+    "od" 'org-journal-new-entry
+    "ok" 'org-priority-down))
+
 (use-package org-journal
   :ensure t
   :init

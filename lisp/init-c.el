@@ -28,6 +28,10 @@
                 (aaw-execute-c++-file))))
   (compile (concat "g++ " (buffer-file-name))))
 
+(aaw-leader-def
+  :states 'normal
+  "cp" 'compile-and-run)
+
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs '(c++-mode . ("ccls"))))
 

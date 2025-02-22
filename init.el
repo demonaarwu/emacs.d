@@ -28,6 +28,7 @@
   (require 'init-evil)
   (require 'init-vertico)
   (require 'init-windows)
+  (require 'init-project)
   (run-with-idle-timer
    1 nil
    #'(lambda ()

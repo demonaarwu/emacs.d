@@ -13,6 +13,15 @@
   (setq eglot-ignored-server-capabilities '(:documentHighlightProvider
                                             :codeLensProvider)))
 
+(use-package xref
+  :ensure nil
+  :general
+  (aaw-leader-def
+    :states 'normal
+    "fr" 'xref-find-references
+    "fd" 'xref-find-definitions
+    "gb" 'xref-go-back))
+
 (use-package eglot-booster
   :vc (:url "https://github.com/jdtsmith/eglot-booster")
   :init
