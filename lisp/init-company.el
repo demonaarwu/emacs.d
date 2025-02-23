@@ -26,5 +26,10 @@
   (add-hook 'completion-at-point-functions #'cape-dict)
   (setq cape-dict-file (concat aaw-emacs-d "misc/english-words.txt")))
 
+(use-package company-prescient
+  :ensure t
+  :hook
+  (company-mode . company-prescient-mode))
+
 (provide 'init-company)
 ;; init-company.el ends here

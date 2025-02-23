@@ -50,5 +50,8 @@
   :init
   (marginalia-mode 1))
 
+(use-package prescient
+  :ensure t)
+
 (provide 'init-vertico)
 ;; init-vertico.el ends here
