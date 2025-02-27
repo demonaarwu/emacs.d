@@ -40,9 +40,10 @@
 
 (use-package orderless
   :ensure t
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-overrides '((file (styles basic partial-completion)))))
+  :init
+  (defun aaw/use-orderless-in-minibuffer ()
+    (setq-local completion-styles '(substring orderless)))
+  (add-hook 'minibuffer-setup-hook 'aaw/use-orderless-in-minibuffer))
 
 (use-package marginalia
   :ensure t
