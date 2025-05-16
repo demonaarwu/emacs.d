@@ -45,7 +45,8 @@
     "oc" 'org-capture
     "oj" 'org-metaup
     "od" 'org-journal-new-entry
-    "ok" 'org-priority-down))
+    "ok" 'org-priority-down
+    "gt" 'org-open-at-point))
 
 (use-package org-journal
   :ensure t
@@ -60,9 +61,11 @@
 
 (use-package writeroom-mode
   :ensure t
-  :init
-  (add-hook 'org-mode-hook 'writeroom-mode)
-  (setq writeroom-width 120))
+  :hook
+  (org-mode . writeroom-mode)
+  (markdown-mode . writeroom-mode)
+  :custom
+  (writeroom-width 120))
 
 (use-package org-download
   :ensure t

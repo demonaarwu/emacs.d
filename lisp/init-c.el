@@ -4,6 +4,7 @@
   (setq c-basic-offset 4))
 
 (add-hook 'c++-mode-hook 'aaw-c++-mode-hook)
+(add-hook 'c-mode-hook 'aaw-c++-mode-hook)
 
 (defun aaw-create-textdata-and-run ()
   (interactive)

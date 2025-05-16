@@ -33,8 +33,8 @@
    1 nil
    #'(lambda ()
        (require 'init-company)
-       ;; (require 'init-eglot)
-       (require 'init-lsp)
+       (require 'init-eglot)
+       ;; (require 'init-lsp)
        (require 'init-treesit)
        (require 'init-term)
        (require 'init-clipboard)
@@ -47,7 +47,7 @@
        (require 'init-python)
        (require 'init-racket)
        ;; (require 'init-web)
-       (require 'init-js)
+       ;; (require 'init-js)
        (require 'init-c)
        (require 'init-cl)
        (require 'init-snippet)
@@ -60,3 +60,4 @@
 
 (provide 'init)
 ;; init.el ends here
+(put 'narrow-to-region 'disabled nil)
