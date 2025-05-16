@@ -9,12 +9,17 @@
    "p" 'vterm-yank
    "q" 'vterm-toggle))
 
+(defun switch-to-vterm ()
+  (interactive)
+  (vterm-toggle)
+  (general-simulate-key "i" :state 'normal))
+
 (use-package vterm-toggle
   :ensure t
   :general
   (aaw-leader-def
     :states 'normal
-    "tt" 'vterm-toggle))
+    "tt" 'switch-to-vterm))
 
 (provide 'init-term)
 ;; init-term.el ends here

@@ -11,8 +11,7 @@
   (require 'auto-save)
   (setq auto-save-idle 0.2)
   (setq auto-save-silent t)   ; quietly save
-  (auto-save-enable)
-  )
+  (auto-save-enable))
 
 (provide 'init-autosave)
 ;; init-autosave.el ends here
