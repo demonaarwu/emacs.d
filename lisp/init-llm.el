@@ -9,7 +9,7 @@
 
   ;; OPTIONAL configuration
   (setq
-   gptel-model 'gemini-pro
+   gptel-model 'gemini-2.0-flash
    gptel-backend (gptel-make-gemini "Gemini"
                    :key GEMINI-API-KEY
                    :stream t)))
