@@ -16,7 +16,6 @@
 * Installation
 
 #+begin_src bash
-  git clone https://github.com/demonaarwu/emacs.d ~/.emacs.d/
+  git clone git@github.com:demonaarwu/emacs.d.git ~/.emacs.d/
   emacs
 #+end_src
-
