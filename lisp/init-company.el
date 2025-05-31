@@ -1,14 +1,5 @@
 ;; init-company.el -- Configuration for Company Mode
 
-(use-package company-quickhelp
-  :ensure t
-  :after company
-  :init
-  (company-quickhelp-mode)
-  (setq company-quickhelp-delay 0)
-  (setq pos-tip-foreground-color "#ffffff"
-        pos-tip-background-color "#ffffff"))
-
 (defun aaw-ispell-setup ()
   (with-eval-after-load 'ispell
     (setq ispell-look-p nil)
@@ -43,6 +34,13 @@
   :ensure t
   :hook
   (company-mode . company-prescient-mode))
+
+(use-package company-posframe
+  :ensure t
+  :hook
+  (company-mode . company-posframe-mode)
+  :custom
+  (company-posframe-quickhelp-delay 0.2))
 
 (provide 'init-company)
 ;; init-company.el ends here
