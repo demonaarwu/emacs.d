@@ -29,23 +29,15 @@
       (setq company-ispell-dictionary ispell-alternate-dictionary))
      (t (setq company-ispell-dictionary (file-truename aaw-dictionary))))))
 
-;; (use-package cape
-  ;; :ensure t
-  :init
-  ;; (add-hook 'completion-at-point-functions #'cape-file)
-  ;; (add-hook 'completion-at-point-functions #'cape-elisp-block)
-  ;; (add-hook 'completion-at-point-functions #'cape-dict)
-  ;; (setq cape-dict-file (concat aaw-emacs-d "misc/english-words.txt")))
-
 (use-package company
   :ensure t
   :init
   (aaw-ispell-setup)
-  ;; (setq company-backends '(company-dabbrev))
-  (setq company-show-numbers t)
-  (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 1)
-  (global-company-mode 1))
+  (global-company-mode 1)
+  :custom
+  (company-show-numbers t)
+  (company-idle-delay 0)
+  (company-minimum-prefix-length 1))
 
 (use-package company-prescient
   :ensure t
