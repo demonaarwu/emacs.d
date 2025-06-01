@@ -12,7 +12,8 @@
    gptel-model 'gemini-2.0-flash
    gptel-backend (gptel-make-gemini "Gemini"
                    :key GEMINI-API-KEY
-                   :stream t)))
+                   :stream t))
+  (setq gptel-default-mode 'org-mode))
 
 (provide 'init-llm)
 ;;; init-llm.el ends here
