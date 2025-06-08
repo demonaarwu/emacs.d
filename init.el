@@ -24,7 +24,6 @@
   (require 'init-misc)
   (require 'init-edit)
   (require 'init-theme)
-  (require 'init-modeline)
   (require 'init-evil)
   (require 'init-vertico)
   (require 'init-windows)
@@ -32,6 +31,7 @@
   (run-with-idle-timer
    1 nil
    #'(lambda ()
+       (require 'init-modeline)
        (require 'init-autosave)
        (require 'init-llm)
        (require 'init-company)
