@@ -1,5 +1,7 @@
 ;;; init-llm.el --- Configuration for LLMs  -*- lexical-binding: t -*-
 
+(defvar llm-log-location "~/projects/org/llm_log/")
+
 (defun aaw-gemini-setup ()
   (gptel-make-gemini "Gemini" :key GEMINI-API-KEY :stream t)
   (setq gptel-model 'gemini-2.0-flash)
@@ -32,6 +34,18 @@
             (writing . ,writing-directive)
             (socrates . ,socrates-directive)))))
 
+(defun aaw-gptel-new-buffer ()
+  "Create a new gptel buffer with Claude and a random name, including an ISO timestamp."
+  (interactive)
+  (let* ((timestamp (format-time-string "%Y%m%d-%H%M%S"))
+         (filename (concat timestamp ".org"))
+         (buffer (gptel filename nil nil)))
+    (if buffer
+        (let ()
+          (switch-to-buffer buffer)
+          (write-file (concat llm-log-location filename) nil))
+      (message "Failed to create gptel buffer"))))
+
 (use-package gptel
   :ensure t
   :init
@@ -41,7 +55,11 @@
   (setq gptel-prompt-prefix-alist '((markdown-mode . "### Prompt:") (org-mode . "*** Prompt: \n") (text-mode . "###  Prompt: \n")))
   (setq gptel-response-prefix-alist '((markdown-mode . #1="") (org-mode . "*** Response: \n") (text-mode . #1#)))
   (add-hook 'gptel-post-response-functions 'gptel-end-of-response)
-  (add-hook 'gptel-post-stream-hook 'gptel-auto-scroll))
+  (add-hook 'gptel-post-stream-hook 'gptel-auto-scroll)
+  :general
+  (aaw-leader-def
+    :states 'normal
+    "gp" 'aaw-gptel-new-buffer))
 
 (provide 'init-llm)
 ;;; init-llm.el ends here
