@@ -24,8 +24,8 @@
   (setq gptel-default-mode 'org-mode)
   (setq gptel-prompt-prefix-alist '((markdown-mode . "### Prompt:") (org-mode . "*** Prompt: \n") (text-mode . "###  Prompt: \n")))
   (setq gptel-response-prefix-alist '((markdown-mode . #1="") (org-mode . "*** Response: \n") (text-mode . #1#)))
-  (add-hook 'gptel-post-response-functions 'gptel-end-of-response))
+  (add-hook 'gptel-post-response-functions 'gptel-end-of-response)
+  (add-hook 'gptel-post-stream-hook 'gptel-auto-scroll))
 
 (provide 'init-llm)
 ;;; init-llm.el ends here
-
