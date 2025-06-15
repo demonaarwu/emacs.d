@@ -53,5 +53,12 @@
   :hook
   (org-mode . org-indent-mode))
 
+(use-package anki-editor
+  :ensure t
+  :after org
+  :config
+  (setq anki-editor-create-decks t ;; Allow anki-editor to create a new deck if it doesn't exist
+        anki-editor-org-tags-as-anki-tags t))
+
 (provide 'init-org)
 ;; init-org.el ends here
