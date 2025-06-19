@@ -36,5 +36,10 @@
       large-hscroll-threshold 1000
       syntax-wholeline-max 1000)
 
+(use-package recentf
+  :ensure nil
+  :init
+  (recentf-mode 1))
+
 (provide 'init-edit)
 ;; init-edit.el ends here
