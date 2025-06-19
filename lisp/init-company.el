@@ -25,6 +25,9 @@
   :init
   (aaw-ispell-setup)
   (global-company-mode 1)
+  (add-hook 'org-mode-hook 'aaw-company-ispell-setup)
+  (add-hook 'markdown-mode-hook 'aaw-company-ispell-setup)
+  (add-hook 'text-mode-hook 'aaw-company-ispell-setup)
   :custom
   (company-show-numbers t)
   (company-idle-delay 0)
