@@ -4,14 +4,14 @@
 
 (defun aaw-gemini-setup ()
   (gptel-make-gemini "Gemini" :key GEMINI-API-KEY :stream t)
-  (setq gptel-model 'gemini-2.0-flash)
+  (setq gptel-model 'gemini-2.0-flash-001)
   (setq gptel-backend (gptel-make-gemini "Gemini"
                         :key GEMINI-API-KEY
                         :stream t)))
 
 (defun aaw-copilot-setup ()
   (gptel-make-gh-copilot "Copilot")
-  (setq gptel-model 'claude-3.7-sonnet
+  (setq gptel-model 'gpt-4.1
         gptel-backend (gptel-make-gh-copilot "Copilot")))
 
 (defun aaw-llm-model-setup (model)
@@ -50,7 +50,7 @@
   :ensure t
   :init
   (aaw-llm-directives-setup)
-  (aaw-llm-model-setup "Gemini")
+  (aaw-llm-model-setup "Copilot")
   (setq gptel-default-mode 'org-mode)
   (setq gptel-prompt-prefix-alist '((markdown-mode . "### Prompt:") (org-mode . "*** Prompt: \n") (text-mode . "###  Prompt: \n")))
   (setq gptel-response-prefix-alist '((markdown-mode . #1="") (org-mode . "*** Response: \n") (text-mode . #1#)))
