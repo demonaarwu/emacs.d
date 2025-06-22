@@ -18,3 +18,4 @@ url/
 /tree-sitter/
 /history
 /.cache/
+.lsp*

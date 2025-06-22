@@ -35,7 +35,7 @@
        (require 'init-autosave)
        (require 'init-llm)
        (require 'init-company)
-       (require 'init-eglot)
+       (require 'init-lsp)
        (require 'init-term)
        (require 'init-snippet)
        (require 'init-clipboard)

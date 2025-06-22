@@ -1,10 +1,11 @@
 ;; init-c.el -- Configuration for C/C++
 
-(defun aaw-c++-mode-hook ()
-  (setq c-basic-offset 4))
+(defun aaw-c-mode-setup ()
+  (setq c-basic-offset 4)
+  (lsp-deferred))
 
-(add-hook 'c++-mode-hook 'aaw-c++-mode-hook)
-(add-hook 'c-mode-hook 'aaw-c++-mode-hook)
+(add-hook 'c++-mode-hook 'aaw-c-mode-setup)
+(add-hook 'c-mode-hook 'aaw-c-mode-setup)
 
 (defun aaw-create-textdata-and-run ()
   (interactive)
@@ -32,9 +33,6 @@
 (aaw-leader-def
   :states 'normal
   "cp" 'compile-and-run)
-
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(c++-mode . ("ccls"))))
 
 (provide 'init-c)
 ;; init-c.el ends here
