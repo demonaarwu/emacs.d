@@ -37,6 +37,7 @@
        (require 'init-company)
        (require 'init-lsp)
        (require 'init-term)
+       (require 'init-eldoc)
        (require 'init-snippet)
        (require 'init-clipboard)
        (require 'init-dired)
