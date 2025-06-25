@@ -7,6 +7,7 @@
   (add-hook 'after-init-hook 'evil-mode)
   (with-eval-after-load 'evil
     (evil-set-initial-state 'vterm-mode 'insert)))
+    ;; (define-key evil-insert-state-map (kbd "<backspace>") 'intellij-backspace)))
 
 (use-package evil-escape
   :ensure t

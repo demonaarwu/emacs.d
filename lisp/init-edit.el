@@ -28,8 +28,6 @@
     (beginning-of-line)
     (looking-at "[[:space:]]*$")))
 
-(global-set-key (kbd "<backspace>") #'intellij-backspace)
-
 (setq-default bidi-display-reordering nil)
 (setq bidi-inhibit-bpa t
       long-line-threshold 1000

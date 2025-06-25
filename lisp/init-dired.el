@@ -1,11 +1,7 @@
 ;;; init-dired.el --- Configuration for Dired  -*- lexical-binding: t -*-
 
 (use-package dired
-  :ensure nil
-  :general
-  (aaw-leader-def
-    :states 'normal
-    "." 'dired))
+  :ensure nil)
 
 (use-package diredfl
   :ensure t

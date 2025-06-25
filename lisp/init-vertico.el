@@ -16,6 +16,8 @@
 (use-package consult
   :ensure t
   :after vertico
+  :init
+  (setq consult-async-min-input 1)
   :general
   (aaw-leader-def
     :states 'normal
